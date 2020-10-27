@@ -3,6 +3,9 @@ package com.example.snackbar.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.ContextMenu
+import android.view.Menu
+import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.snackbar.R
@@ -20,6 +23,9 @@ class MainActivity : AppCompatActivity(), ContractMainActivity {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //Adiciona o toolbar
+        setSupportActionBar(findViewById(R.id.homeToolbar))
 
         //Comeca com o fragment entrada setado
         alterColorEntrada(R.color.colorSelected)
@@ -56,6 +62,12 @@ class MainActivity : AppCompatActivity(), ContractMainActivity {
 
 
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
 
     fun alterColorHome(idCor: Int) {
         llLinhaTabHome.setBackgroundColor(ContextCompat.getColor(this, idCor));

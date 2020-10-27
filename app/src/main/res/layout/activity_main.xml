@@ -8,13 +8,15 @@
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/homeToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_arrow_back"
         app:title="@string/app_name"
-        app:titleTextColor="@color/colorWhite" />
+        app:titleTextColor="@color/colorWhite"
+        app:menu="@menu/menu_main"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -88,7 +90,7 @@
         <FrameLayout
             android:id="@+id/flFragDetails"
             android:layout_width="403dp"
-            android:layout_height="670dp"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

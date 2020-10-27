@@ -20,4 +20,11 @@
     <string name="tv_home">Home</string>
     <string name="tvEntrada">Entradas</string>
     <string name="tvGasto">Gastos</string>
+
+    <string name="btn_gastos">Cadastrar</string>
+    <string name="descricao">Descrição</string>
+    <string name="categoria">Categoria</string>
+    <string name="data_hora">Data - hora</string>
+    <string name="valor">Valor</string>
+
 </resources>
