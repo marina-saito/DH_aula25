@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.ContextMenu
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
@@ -61,7 +62,19 @@ class MainActivity : AppCompatActivity(), ContractMainActivity {
         Log.i(TAG, usuario.toString())
 
 
+
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.profile -> {
+                Toast.makeText(this, "PERFIL DE USUARIO", Toast.LENGTH_SHORT).show()
+                return true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
